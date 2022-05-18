@@ -4,12 +4,10 @@
 
 {% block contenidoQueCambia %}  
 
-<form action="{% url 'animales' %}" methot="POST">{% csrf_token %}
+<form action="{% url 'animales' %}" method="POST">{% csrf_token %}
 
-    <p>NOMBRE:<input type="text" name="nombre" id="nombre"></p>
-    <p>RAZA:<input type="text" name="raza" id="raza"></p>
-    <p>EDAD:<input type="text" name="edad" id="edad"></p>
-    <input type="submit" value="ENVIAR">
+    <table> {{formulario.as_table}}</table>
+    <input type="submit" name="ENVIAR">
 </form>
 
 {% endblock %} 

@@ -1,0 +1,22 @@
+{% extends "AppCoder/padre.html" %} 
+
+{% load static %} 
+
+{% block contenidoQueCambia %}  
+
+<h1>Estamos buscando la raza del perro: {{raza}}</h1>
+
+{% if animales %} 
+
+<ul>
+{% for animal in animales %} 
+    <li>{{animal.raza}}</li>
+    <br>
+
+{% endfor %}  
+
+{% endif %}
+</ul>
+
+
+{% endblock %}

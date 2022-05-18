@@ -4,11 +4,9 @@
 
 {% block contenidoQueCambia %}  
 
-<form action="{% url 'personas' %}" methot="POST">{% csrf_token %}
+<form action="{% url 'jugadores' %}" method="POST">{% csrf_token %}
 
-    <p>NOMBRE:<input type="text" name="nombre" id="nombre"></p>
-    <p>EQUIPO:<input type="text" name="equipo" id="equipo"></p>
-    <p>PUESTO:<input type="text" name="puesto" id="puesto"></p>
+    <table> {{formulario.as_table}}</table>
     <input type="submit" value="ENVIAR">
 </form>
 
