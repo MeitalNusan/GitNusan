@@ -1,0 +1,21 @@
+{% extends "AppCoder/padre.html" %} 
+
+{% load static %} 
+
+{% block contenidoQueCambia %}  
+
+<form action="{% url 'personas' %}" methot="POST">{% csrf_token %}
+
+    <p>NOMBRE:<input type="text" name="nombre" id="nombre"></p>
+    <p>EQUIPO:<input type="text" name="equipo" id="equipo"></p>
+    <p>PUESTO:<input type="text" name="puesto" id="puesto"></p>
+    <input type="submit" value="ENVIAR">
+</form>
+
+{% endblock %} 
+
+{% block titulo %}
+
+    <h1>BIENVENIDOS! </h1>
+
+{% endblock %} 

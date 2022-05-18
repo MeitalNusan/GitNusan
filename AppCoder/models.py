@@ -4,6 +4,8 @@ class Persona(models.Model):
     nombre=models.CharField(max_length=50)
     edad=models.IntegerField()
     
+    def __str__(self):
+        return self.nombre + " " + str(self.edad) 
 
 class Animal(models.Model):
     nombre=models.CharField(max_length=50)
@@ -12,7 +14,7 @@ class Animal(models.Model):
     
 
     def __str__(self):
-     return self.nombre + " " + str(self.edad) + self.raza
+        return self.nombre + " " + self.raza + str(self.edad)
 
 class Jugador(models.Model):
     nombre=models.CharField(max_length=50)
